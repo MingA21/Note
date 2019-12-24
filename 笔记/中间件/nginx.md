@@ -90,7 +90,7 @@
    --http-scgi-temp-path=/var/temp/nginx/scgi
    ```
 
-   Prefix表示nginx的安装位置其他都是一些日志，临时文件的位置(**如果嫌麻烦可以直接./configure)**
+   Prefix表示nginx的安装位置其他都是一些日志，临时文件的位置( **如果嫌麻烦可以直接./configure**)
 
  6. 编译配置完后后发现多了一个makefile文件
 
@@ -102,7 +102,7 @@
 
  8. 安装 **make install**
 
- 9. 启动测试进入**/usr/local/nginx**，后**./nginx**启动
+ 9. 启动测试进入 **/usr/local/nginx**，后 **./nginx**启动
 
  10. 测试是否启动成功 **ps -ef|grep nginx** 
 
@@ -111,9 +111,9 @@
     </div>
 
 ​	浏览器访问：
-
+  <div>
    		 <img src="../../resource\middleware\nginx\nng5.png" width =70% height = 80%/>
-
+   </div>
 
 
 ### 3. 基本命令
