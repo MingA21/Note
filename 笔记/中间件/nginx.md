@@ -109,7 +109,7 @@
         <img src="../../resource\middleware\nginx\nng4.png" width =70% height = 80%/>
     </div>
 
-​	浏览器访问：
+ 11. 浏览器访问：
     <div>
    		 <img src="../../resource\middleware\nginx\nng5.png" width =70% height = 80%/>
     </div>
