@@ -62,7 +62,7 @@
    ```
 
    > ​	gcc，安装nginx需要先将官网下载的源码进行编译，编译依赖gcc环境，如果没有gcc环境，需要安装
-> 
+   > 
    > ​	PCRE(Perl Compatible Regular Expressions)是一个Perl库，包括 perl 兼容的正则表达式库。nginx的http模块使用pcre来解析正则表达式，所以需要在linux上安装pcre库。
    > 
    > ​	pcre-devel是使用pcre开发的一个二次开发库。nginx也需要此库。
@@ -110,15 +110,11 @@
         <img src="../../resource\middleware\nginx\nng4.png" width =70% height = 80%/>
     </div>
 
-    浏览器访问：
+​	浏览器访问：
 
-    <div>
-        <img src="../../resource\middleware\nginx\nng5.png" width =70% height = 80%/>
-    </div>
+   		 <img src="../../resource\middleware\nginx\nng5.png" width =70% height = 80%/>
 
-    ​	
 
-   
 
 ### 3. 基本命令
 
