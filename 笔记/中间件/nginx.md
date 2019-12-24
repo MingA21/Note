@@ -105,7 +105,6 @@
  9. 启动测试进入 **/usr/local/nginx**，后 **./nginx**启动
 
  10. 测试是否启动成功 **ps -ef|grep nginx** 
-
     <div>
         <img src="../../resource\middleware\nginx\nng4.png" width =70% height = 80%/>
     </div>
