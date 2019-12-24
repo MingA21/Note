@@ -96,23 +96,25 @@
 
  7. 执行编译命令  **make**
 
-    <div>
+<div style="margin-left:30px">
         <img src="../../resource\middleware\nginx\nng2.png" width =70% height = 80%/>
-    </div>
+</div>
 
  8. 安装 **make install**
 
  9. 启动测试进入 **/usr/local/nginx**，后 **./nginx**启动
 
- 10. 测试是否启动成功 **ps -ef|grep nginx** 
-    <div>
+ 10. 测试是否启动成功 **ps -ef|grep nginx**
+
+ <div style="margin-left:30px">
         <img src="../../resource\middleware\nginx\nng4.png" width =70% height = 80%/>
-    </div>
+</div>
 
  11. 浏览器访问：
-    <div>
+
+<div style="margin-left:30px">
    		 <img src="../../resource\middleware\nginx\nng5.png" width =70% height = 80%/>
-    </div>
+</div>
 
 
 ### 3. 基本命令
