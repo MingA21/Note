@@ -116,10 +116,51 @@
    		 <img src="../../resource\middleware\nginx\nng5.png" width =70% height = 80%/>
 </div>
 
-
 ### 3. 基本命令
 
+##### 3.1 启动
+
+​    **./nginx**
+
+> 注意：执行./nginx启动nginx，这里可以-c指定加载的nginx配置文件，如下：
+>
+> ​			./nginx -c /usr/local/nginx/conf/nginx.conf
+>
+> 如果不指定-c，nginx在启动时默认加载conf/nginx.conf文件，此文件的地址也可以在编译安装nginx时指定./configure的参数（--conf-path= 指向配置文件（nginx.conf）
+
+##### 3.2 停止
+
+  1> 快速停止  .**./nginx -s stop**   此命令相当于先查询出pid然后kill
+
+  2> 待任务执行完毕后停止   **./nginx -s quit**
+
+##### 3.3 重启
+
+​	  **./nginx -s reload** 
+
+
+
 ### 4. 虚拟主机/静态代理
+
+> **虚拟主机**：所谓的虚拟主机就类似互联网下单独的一台服务器，提供一个外部访问的端口，nginx默认启动的是80端口，访问的目录资源是nginx根目录的html文件，
+>
+> <div style="margin-left:30px">
+> 		 <img src="../../resource\middleware\nginx\ng21.png" width =70% height = 80%/>
+> </div>
+>
+> nginx下实现虚拟主机的方式有两种：
+>
+> 		1. 配置不同端口，类似原始80端口可以在配置一个81端口指定目录即可，如html2
+>
+>   		2. 通过不同的域名访问，例如同一个ip下配置了两个域名，也可以针对这两个域名配置不同的资源目录
+
+> **静态代理**： nginx代理某个服务器的某个目录，可以配合ftp服务器一起使用访问静态资源，可以说 **静态代理是虚拟主机的一种应用方式。**
+
+
+
+##### 4.1 端口方式配置虚拟主机
+
+
 
 ### 5. 反向代理/负载均衡
 
