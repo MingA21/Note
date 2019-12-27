@@ -153,14 +153,57 @@
 > 		1. 配置不同端口，类似原始80端口可以在配置一个81端口指定目录即可，如html2
 >
 >   		2. 通过不同的域名访问，例如同一个ip下配置了两个域名，也可以针对这两个域名配置不同的资源目录
-
+> 
 > **静态代理**： nginx代理某个服务器的某个目录，可以配合ftp服务器一起使用访问静态资源，可以说 **静态代理是虚拟主机的一种应用方式。**
 
 
 
 ##### 4.1 端口方式配置虚拟主机
 
+<div style="margin-left:30px">
+		 <img src="../../resource\middleware\nginx\ng22.png" width =70% height = 80%/>
+</div>
+
+​    此时的配置表示访问localhost:80/ ，默认访问当前目录下html文件中的内容，81同理
+
+##### 4.2 域名方式配置虚拟主机
+
+<div style="margin-left:30px">
+		 <img src="../../resource\middleware\nginx\ng23.png" width =70% height = 80%/>
+</div>
+
 
 
 ### 5. 反向代理/负载均衡
 
+##### 5.1 反向代理
+
+​		Nginx代理后台集群服务器就可以称之为反向代理（演示需要一Ningx，两Tomcat）
+
+<div style="margin-left:30px">
+		 <img src="../../resource\middleware\nginx\n31.png" width =70% height = 80%/>
+</div>
+
+ 1>创建两个tomcat配置不同的启动端口，在tomcat下修改一个足以区分二者的网页
+
+ 2> 配置反向代理信息（upstream）
+
+ 3> 配置虚拟主机serve信息
+
+<div style="margin-left:30px">
+		 <img src="../../resource\middleware\nginx\n32.png" width =70% height = 80%/>
+</div>
+
+ 	单纯的虚拟主机只能配置本地或者其他服务器的目录做静态资源的访问，反向代理则可以将请求转发到其他web服务器上。
+
+​    通过上述配置后访问loclahost:81,可以看出两个tomcat访问的次数接近1:1，也就是说默认权重为1:1
+
+##### 5.2 负载均衡
+
+​	 在反向代理的基础上增加权重配置即可
+
+<div style="margin-left:30px">
+		 <img src="../../resource\middleware\nginx\n33.png" width =70% height = 80%/>
+</div>
+
+​     此时每访问两次8080，才会访问一次8081
